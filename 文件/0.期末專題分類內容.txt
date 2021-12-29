@@ -5,9 +5,9 @@
 4.系統模型(類別圖、至少一使用案例的序列圖)
 5.測試案例(每個使用案例)
 
-Github或GitLab的程式碼
+a.Github或GitLab的程式碼
 https://github.com/WeepTW/CPETest
 
-7.品質標準
+6.品質標準
 
-個人學習心得(分開繳交)
+b.個人學習心得(分開繳交)
