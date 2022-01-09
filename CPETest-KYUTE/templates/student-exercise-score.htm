@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+		<style type="text/css">
+
+            body{
+                font-size: 20px;font-family:"monospace";margin: 0px;
+            }
+            .home{
+                text-decoration: none;color:unset
+            }
+            .homed{
+                background-color: #404040;height: 100px;font-size: 50px;color: #E3E3E3;
+                text-align:center;line-height:100px;margin: 0px;width: 100%;
+            }
+            form{
+                line-height: 30px;
+            }
+            .in{
+                width:200px;height:25px;
+            }          
+            .btn {
+                border: 2px solid white;
+                background-color: white;
+                color: black;text-decoration:none;
+                padding: 10px 20px;
+                font-size: 16px;border-radius: 10px;
+                cursor: pointer;border-color: white;
+                color: #404040;
+            }
+            .btn:hover{
+                background-color: #F5F5F5;
+                color: #404040;
+            }
+            .btn:active{
+                background-color: #F5F5F5;border-color: #F5F5F5;
+                color: #404040;
+            }
+            
+            input:focus{
+                background-color: #EDEDED;
+                color: black;
+            }
+            input {
+                border: 2px solid black;
+                background-color: white;
+                color: black;text-decoration:none;
+                padding: 5px 10px;margin: 5px;
+                font-size: 16px;border-radius: 10px;
+                cursor: pointer;border-color: #919191;
+                color: #919191;
+            }
+            .bottonbut{
+                color: black;
+                text-align: center;
+                padding:20px 5px;
+                text-decoration: none;
+                width: auto;cursor: pointer;
+            }
+            .bottonbut:hover{
+                color: #EDEDED;
+            }
+			table#score {
+                margin-top: 20px ;background-color:white;
+                border-radius: 10px;
+                overflow-x:auto;max-width: 80%;
+                
+            }
+            #score th{
+                font-size: 15px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #7B7B7B;padding:10px;max-width: 100cm;text-align:middle;margin-top: 10px;
+                color: white;border-color: #aaaaaa;
+            }
+            #score td {
+                padding:10px;max-width: 100cm;text-align:center;
+                text-align:middle;margin-top: 40px;
+            }
+            #score tr:nth-child(odd){
+                padding:10px;max-width: 100cm;
+                text-align:middle;margin-top: 40px;background-color: #E0E0E0;
+            }
+            #score tr:nth-child(1){
+                background-color: #000000;color: #eeeeee;text-align:center;
+                border-top-left-radius: 10px;border-top-right-radius: 10px;
+            }
+            #score tr:nth-child(even){
+                padding:10px;max-width: 100cm;
+                text-align:middle;margin-top: 40px;background-color: white;
+            }
+            .sub{
+                padding: 20px;border: 5px solid;width: 220px; background-color:#a07708;
+                display: inline-block;border-radius: 10px;text-align: start;
+            }
+			#menu {
+                list-style-type: none;
+                margin-top: -100px;
+                padding: 0;
+                width: 15%;
+                background-color: #404040;
+                position: fixed;
+                height: 100%;
+                overflow: hidden;z-index: 1;
+            }
+            .menu {
+                position: -webkit-sticky; 
+                position: sticky;
+                top: -2px;
+                z-index: 1;
+            }
+            li a,li div {
+                display: block;
+                color: white;
+                text-align: center;
+                padding:15px 15px;
+                text-decoration: none;
+                width: auto;cursor: pointer;
+            }
+            ul#menu li {
+                float: none;
+            }
+            li.pydrop{
+                display: inline-block;
+            }
+            li a:hover ,li div:hover  {
+                background-color: #333333;color: #4CAF50;
+            }
+            #pycon , #mlcon{
+                display: none;
+                position: absolute ;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 4;overflow: visible;
+            }
+            #pycon a ,#mlcon a{
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;overflow: visible;
+                text-align: left;
+            }
+            #pycon a:hover ,#mlcon a:hover {
+                background-color: #f1f1f1;
+            }
+			.pydropl:hover #pycon ,.mldropl:hover #mlcon{
+                display: block;
+            }
+
+            main{
+                margin: 10px;justify-content: center;text-align: center;
+                margin-left: 15%;margin-right: 15%;align-items: center;
+                min-height: 800px;
+            }
+			
+		</style>
+        
+    </head>
+    <body style="background-color: #F5F5F5;width: 100%;">
+	
+        <div class="homed">
+            <p href="/" class="homed">練習成績</p>
+        </div>
+        
+        <ul class="menu;sidenav" id="menu">
+            <li><a href="C:\Users\user\OneDrive\桌面\新增資料夾\student-personal-information.htm" target="_self">
+                個人資料</a></li>
+            </li>
+			<li><a href="C:\Users\user\OneDrive\桌面\新增資料夾\student-personal-information-change.htm" target="_self">
+                修改個人資料</a></li>
+            </li>
+			<li class="mldropl"><a class="mldrop">選擇練習科目</a>
+                <div id="mlcon">
+                    <a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exercise1.htm" target="_self">科目1</a>
+					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exercise2.htm">科目2</a>
+					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exercise3.htm">科目3</a>
+                </div>
+            </li>
+			<li class="mldropl"><a class="mldrop">選擇測驗科目</a>
+                <div id="mlcon">
+                    <a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exem1.htm" target="_self">科目1</a>
+					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exem2.htm">科目2</a>
+					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exem3.htm">科目3</a>
+                </div>
+            </li>
+			<li class="pydropl"><a class="pydrop">查詢成績</a>
+                <div id="pycon">
+                    <a href="C:\Users\user\OneDrive\桌面\新增資料夾\student-exercise-score.htm">練習</a><a href="C:\Users\user\OneDrive\桌面\新增資料夾\student-exem-score .htm">測驗</a>
+                </div>
+			</li>
+        </ul>
+<div id="user"> </div>
+	
+<div style='padding-left: 35%;'>
+	<table id='score' style="text-align: center;display: inline-block;">
+	<colgroup span="5"></colgroup>
+	<tr>
+		<th>科目名稱</th>
+		<th>成績紀錄</th>
+		<th>正確題數</th>
+		<th>錯誤題數</th>
+		<th>答對率</th>
+    </tr>
+    <tr>
+                        <th rowspan=3>科目1</th>
+                        <td>60</td>
+                        <td>6</td>
+                        <td>4</td>
+						<td>60%</td>
+						</tr>
+                <td>70</td>
+                <td>7</td>
+                <td>3</td>
+				<td>70%</td>
+				</tr>
+				<td>90</td>
+                <td>9</td>
+                <td>1</td>
+				<td>90%</td>
+	</tr>
+                        <th rowspan=4>科目2</th>
+                        <td>60</td>
+                        <td>3</td>
+                        <td>2</td>
+						<td>60%</td>
+						</tr>
+                <td>80</td>
+                <td>4</td>
+                <td>1</td>
+				<td>80%</td>
+				</tr>
+				<td>100</td>
+                <td>5</td>
+                <td>0</td>
+				<td>100%</td>
+				</tr>
+				<td>100</td>
+                <td>5</td>
+                <td>0</td>
+				<td>100%</td>
+				</tr>
+                        <th rowspan=4>科目3</th>
+                        <td>50</td>
+                        <td>1</td>
+                        <td>1</td>
+						<td>50%</td>
+						</tr>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+				<td>0%</td>
+				</tr>
+				<td>100</td>
+                <td>2</td>
+                <td>0</td>
+				<td>100%</td>
+				</tr>
+</table>
+</div>
+
+		
+		
+		<hr style="margin-top: 50px;"/>
+        <div style="text-align: center;min-height: 50px;">
+            更新日期:2022年1月8日 02:45
+		<br>
+			開發人員:蔡凡葦、范植勝、黃姿毓
+        </div>
+	
+	
+	
+    </body>
+</html>

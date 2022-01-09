@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style type="text/css">
+        body {
+            font-size: 20px;
+            font-family: "monospace";
+            margin: 0px;
+        }
+
+        .home {
+            text-decoration: none;
+            color: unset
+        }
+
+        .homed {
+            background-color: #404040;
+            height: 100px;
+            font-size: 50px;
+            color: #E3E3E3;
+            text-align: center;
+            line-height: 100px;
+            margin: 0px;
+            width: 100%;
+        }
+
+        form {
+            line-height: 30px;
+        }
+
+        .in {
+            width: 200px;
+            height: 25px;
+        }
+
+        .btn {
+            border: 2px solid white;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            border-color: white;
+            color: #404040;
+        }
+
+        .btn:hover {
+            background-color: #F5F5F5;
+            color: #404040;
+        }
+
+        .btn:active {
+            background-color: #F5F5F5;
+            border-color: #F5F5F5;
+            color: #404040;
+        }
+
+        input:focus {
+            background-color: #EDEDED;
+            color: black;
+        }
+
+        input {
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            border-color: #919191;
+            color: #919191;
+        }
+
+        .bottonbut {
+            color: black;
+            text-align: center;
+            padding: 20px 5px;
+            text-decoration: none;
+            width: auto;
+            cursor: pointer;
+        }
+
+        .bottonbut:hover {
+            color: #EDEDED;
+        }
+
+
+        main {
+            margin: 10px;
+            justify-content: center;
+            text-align: center;
+            margin-left: 15%;
+            margin-right: 15%;
+            align-items: center;
+            min-height: 800px;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #F5F5F5;width: 100%;">
+
+    <div class="homed">
+        <h1 href="/" class="homed">KYUTES GROUP1</h1>
+    </div>
+    <div id="user"> </div>
+    <hr>
+    <main id="main">
+
+        <h1>登入</h1>
+        <form action="{{ url_for('login') }}" method="post"><input type="hidden" name="sheetName"
+                value="學生">
+            <p>
+            <p><label for="id_userid">學號：</label> <input type="text" name="userid" maxlength="9" required
+                    id="id_userid"></p>
+            <p><label for="id_password">密碼：</label> <input type="password" name="password" required id="id_password">
+            </p>
+            </p>
+            <br>
+            <input type="submit" value="學生登入" class="btn" name='id_userid' onClick="log('student')"><br>
+            <br>
+            <input type="submit" value="管理員登入" class="btn" name='id_password' onClick="log('manager')"><br>
+        </form>
+        <script type="text/javascript">
+            function log(sheetName) {
+                document.getElementById("sheetName").innerHTML = sheetName
+                entryAllowed();
+                alert("sheetName");
+            }
+        </script>
+
+    </main>
+    <hr style="margin-top: 50px;" />
+    <div style="text-align: center;min-height: 50px;">
+        更新日期:2022年1月8日 02:45
+        <br>
+        開發人員:蔡凡葦、范植勝、黃姿毓
+    </div>
+
+
+</body>
+
+</html>

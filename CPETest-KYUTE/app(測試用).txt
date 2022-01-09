@@ -1,0 +1,12 @@
+import demo
+from flask import Flask,render_template,url_for, redirect,request,Blueprint
+app = Flask(__name__)
+
+@app.route('/')
+def try_mysql():
+    (cursor, cnx) = demo.get_cursor()
+    sql = ("SELECT * FROM address_book")
+    cursor.execute(sql)
+    return render_template('templates.page.html', t_data=cursor.fetchall())
+
+app.run()
