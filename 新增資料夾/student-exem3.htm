@@ -160,6 +160,7 @@
         <div class="homed">
             <p href="/" class="homed">科目3測驗</p>
         </div>
+         
         <ul class="menu;sidenav" id="menu">
             <li><a href="C:\Users\user\OneDrive\桌面\新增資料夾\student-personal-information.htm" target="_self">
                 個人資料</a></li>
@@ -169,16 +170,16 @@
             </li>
 			<li class="mldropl"><a class="mldrop">選擇練習科目</a>
                 <div id="mlcon">
-                    <a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exercise1.htm" target="_self">科目1</a>
-					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exercise2.htm">科目2</a>
-					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exercise3.htm">科目3</a>
+                    <a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exercise1.htm" target="_blank">科目1</a>
+					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exercise2.htm" target="_blank">科目2</a>
+					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exercise3.htm" target="_blank">科目3</a>
                 </div>
             </li>
 			<li class="mldropl"><a class="mldrop">選擇測驗科目</a>
                 <div id="mlcon">
-                    <a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exem1.htm" target="_self">科目1</a>
-					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exem2.htm">科目2</a>
-					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exem3.htm">科目3</a>
+                    <a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exem1.htm" target="_blank">科目1</a>
+					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exem2.htm" target="_blank">科目2</a>
+					<a href="file:///C:/Users/user/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99%E5%A4%BE/student-exem3.htm" target="_blank">科目3</a>
                 </div>
             </li>
 			<li class="pydropl"><a class="pydrop">查詢成績</a>
@@ -191,6 +192,30 @@
 <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
 </head>
 
+<html>
+<center>
+<div id="myMessage">這裡是顯現文字的地方</div>
+</center>
+</html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- 沒有這一行，如果用 Big5 編碼會出錯 -->
+<script type="text/javascript" language="javascript">
+var CountDownSecond = 3600; //讓倒數計時器一開始的數字是10，10秒鐘後關閉視窗
+var OpenWindows = window.open('', '_self');
+
+CountDown();
+function CountDown() {
+if (CountDownSecond !=0) {
+CountDownSecond -= 1;
+document.getElementById("myMessage").innerHTML = "測驗結束計時 " + CountDownSecond + " 秒";
+} else {
+document.getElementById("myMessage").innerHTML = "視窗關閉！";
+OpenWindows.close();
+return;
+}
+setTimeout("CountDown()",1000);
+}
+</script>
 <body style="background-color: #F5F5F5;width: 100%";>
 
 <h2 style='padding-left:30%;min-height: 1px;margin:10px'>題目1</h2>
