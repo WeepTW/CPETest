@@ -6,7 +6,7 @@
 
 下載流程:
 1.下載CPETest-KYUTE到 C:/
-2.確認安裝python、pip與Windows 10 作業系統
+2.確認安裝python、pip(有附安裝檔)與Windows 10 作業系統
 (python3.8，點選add path後就都設定好了)
 3.執行'C:/CPETest-KYUTE/CPETest-KYUTE.cmd'
 4.執行後自動開啟預設網頁
