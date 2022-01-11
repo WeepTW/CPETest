@@ -13,9 +13,7 @@
 5.完成
 
 執行檔套件:
-python(flask、pandas)
-VB code(for IDE)
+python(flask、pandas); VB code(for IDE)
 
 程式語言與相關技能樹:
-前端:Html(POST,GET傳輸)、js(json解包)
-後端:Python(flask開發、JSON打包、POST,GET接收、pandas)
+前端:Html(POST,GET傳輸)、js(json解包); 後端:Python(flask開發、JSON打包、POST,GET接收、pandas)
