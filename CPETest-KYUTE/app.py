@@ -11,23 +11,35 @@ def dir():
     view.initEntry()
     return redirect(url_for('page'))
 
-@app.route('/log/tmp', methods=['POST'])
+@app.route('/log/tmp', methods=['POST','GET'])
 def login():
     if request.method == 'POST':
-        type = 1 #view.loginAct(request.form.get('sheetName') ,request.form.get('userid'),request.form.get('password')) #回傳accountInfo的json
+        if request.form.get('userid') == '1' and request.form.get('password') == '1':
+            type = 1
+        elif request.form.get('sheetName') == 2:
+            type = 2
+        else :
+            type = 0
+        # type = view.loginAct(request.form.get('sheetName') ,request.form.get('userid'),request.form.get('password')) #回傳accountInfo的json
         if type == 1:
-            print(request.method)
             return redirect(url_for('loginSt'))
         elif type == 2:
             return redirect(url_for('loginMa'))
+        else:
+            return redirect(url_for('page'))
     else:
         return redirect(url_for('page'))
 
-@app.route('/log/student/tmp', methods = ['POST'])
-def tmpStu():
-    if view.is_log == 1:
-        view.student(request.form.get('pass'))
-        return render_template('student-personal-information.htm')
+@app.route('/log/student/tmp/<type>', methods = ['POST','GET'])
+def tmpSt(type):
+    if request.method == 'GET' and view.is_log == 1:
+        
+        if type == '1':
+            return render_template('student-personal-information.htm')
+        elif type == '2':
+            return render_template('student-exem-score.htm')
+        else:
+            return render_template('student-personal-information.htm')
     else:
         return redirect(url_for('page')) 
 
@@ -45,8 +57,7 @@ def tmpTa(type,item):
 def page():
     return render_template('page.htm')
 
-
-@app.route('/log/student-page')
+@app.route('/log/student-page', methods = ['GET'])
 def loginSt():
     if view.is_log == 1:
         return render_template('student-personal-information.htm')
